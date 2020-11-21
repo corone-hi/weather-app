@@ -132,6 +132,8 @@ const styles = StyleSheet.create({
 
 #### flex box
 
+//default
+
 - 웹사이트에서 모든 flex box의 디폴트는 로우(row)
 
 - 리액트 네이티브에선 flex direction이 "컬럼(column)"
@@ -141,4 +143,42 @@ const styles = StyleSheet.create({
 const styles = StyleSheet.create({
   flexDirection: "row"
 })`
+
+-flex layout 핸들링
+
+`
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.yelloView}><Text>Hello</Text></View>
+      <View style={styles.blueView}><Text>Hello</Text></View>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0a3d62',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  yelloView:{
+    flex:1,
+    backgroundColor:"yellow"
+  },
+  blueView:{
+    flex:1,
+    backgroundColor:"blue"
+  }
+});
+`
+
+
+
 
