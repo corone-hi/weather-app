@@ -89,3 +89,25 @@ To run your project, navigate to the directory and run one of the following npm 
 
 : View는 `<div>`와 유사한 것
 : 리액트 네이티브에서는 전부 View 안에 집어 넣어야 한다.
+
+* span과 같은 속성 X -> Text 안에 집어 넣으면 된다.
+
+
+#### css 엔진
+
+:리엑트 네이티브에서 css엔진을 구현해놓았기에 flex box와 같은 것들을 이용할 수 있다.
+
+`
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+`
+
+🔴차이점: align-items으로 사용했다면 여기서는 alignItems로 표기
+
