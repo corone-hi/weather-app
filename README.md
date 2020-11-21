@@ -19,3 +19,10 @@ To run your project, navigate to the directory and run one of the following npm 
 
 2. weather-app 폴더로 이동
 3. visual code로 열고싶으면  ` code . ` 입력 
+
+
+## github
+
+1. git remote add origin [repo 주소]
+2. git pull origin master --allow-unrelated-histories (readme파일을 받음
+3. 
