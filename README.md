@@ -71,7 +71,7 @@ To run your project, navigate to the directory and run one of the following npm 
  
  - 안드로이드, ios의 네이티브 텍스트, 뷰를 이어주는 브릿지
  
- `
+ ```
  export default function App() {
   return (
     <View style={styles.container}>
@@ -80,7 +80,7 @@ To run your project, navigate to the directory and run one of the following npm 
     </View>
   );
 }
-`
+```
 
 - 우리는 컴포넌트를 사용, 즉 자바스크립트
 - 컴포넌트 안에 브릿지가 있다 -> 누군가가 작성해 놓은 swift code나 java code로 iphone, android가 이 컴포넌트를 이해하도록 하기 위해 (브릿지는 그러므로 항상 존재)
@@ -97,7 +97,7 @@ To run your project, navigate to the directory and run one of the following npm 
 
 :리엑트 네이티브에서 css엔진을 구현해놓았기에 flex box와 같은 것들을 이용할 수 있다.
 
-`
+```
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   },
 });
 
-`
+```
 
 🔴차이점: align-items으로 사용했다면 여기서는 alignItems로 표기
 
@@ -118,7 +118,8 @@ const styles = StyleSheet.create({
 `
 - styles API도 수정 필요
 
-`const styles = StyleSheet.create({
+```
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0a3d62',
@@ -128,7 +129,8 @@ const styles = StyleSheet.create({
   text:{
     color:'white',
   }
-});`
+});
+```
 
 #### flex box
 
@@ -146,7 +148,8 @@ const styles = StyleSheet.create({
 
 -flex layout 핸들링
 
-` import { StatusBar } from 'expo-status-bar';
+```
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -175,7 +178,8 @@ const styles = StyleSheet.create({
     flex:1,
     backgroundColor:"blue"
   }
-}); `
+}); 
+```
 
 
 
