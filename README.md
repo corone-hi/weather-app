@@ -85,5 +85,7 @@ To run your project, navigate to the directory and run one of the following npm 
 - 우리는 컴포넌트를 사용, 즉 자바스크립트
 - 컴포넌트 안에 브릿지가 있다 -> 누군가가 작성해 놓은 swift code나 java code로 iphone, android가 이 컴포넌트를 이해하도록 하기 위해 (브릿지는 그러므로 항상 존재)
 
-#### <View>
-  : 뷰는 <div>와 유사한 것
+#### View
+
+: View는 `<div>`와 유사한 것
+: 리액트 네이티브에서는 전부 View 안에 집어 넣어야 한다.
