@@ -17,3 +17,5 @@ To run your project, navigate to the directory and run one of the following npm 
 - npm run web
 
 
+2. weather-app 폴더로 이동
+3. visual code로 열고싶으면  ` code . ` 입력 
