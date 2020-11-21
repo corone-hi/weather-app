@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
 
 -flex layout 핸들링
 
-`import { StatusBar } from 'expo-status-bar';
+` import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     flex:1,
     backgroundColor:"blue"
   }
-});`
+}); `
 
 
 
