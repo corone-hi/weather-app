@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
   }
 }); 
 ```
-<img src="https://blogfiles.pstatic.net/MjAyMDExMjFfMjgw/MDAxNjA1OTU3Njg0NjU1.RE5ipSgQiizzWCDlNCau54KB5FrSBVU_DvjXYRYMyQgg.FnI_Uub95J8H_MNPO3k3aM6KRvVcEuDSZVU0ENnqvfUg.JPEG.cucu154/KakaoTalk_20201121_200411952_02.jpg" width="40%"/>
+<img src="https://blogfiles.pstatic.net/MjAyMDExMjFfMjgw/MDAxNjA1OTU3Njg0NjU1.RE5ipSgQiizzWCDlNCau54KB5FrSBVU_DvjXYRYMyQgg.FnI_Uub95J8H_MNPO3k3aM6KRvVcEuDSZVU0ENnqvfUg.JPEG.cucu154/KakaoTalk_20201121_200411952_02.jpg" width="40%" height="40%"/>
 
 ```
 const styles = StyleSheet.create({
@@ -200,4 +200,4 @@ const styles = StyleSheet.create({
 });
 ```
 
-<img src ="https://blogfiles.pstatic.net/MjAyMDExMjFfMjQ2/MDAxNjA1OTU3Njg0NjMz.ZerupBMxg69sr13YPGaaaqh8dauuWI_XNBytPN9v1mQg.4AkKBqiGBrrxB65_2n5YAqgKeAnU10sfikgTX8SStGMg.JPEG.cucu154/KakaoTalk_20201121_200411952_01.jpg" width="40%"/>
+<img src ="https://blogfiles.pstatic.net/MjAyMDExMjFfMjQ2/MDAxNjA1OTU3Njg0NjMz.ZerupBMxg69sr13YPGaaaqh8dauuWI_XNBytPN9v1mQg.4AkKBqiGBrrxB65_2n5YAqgKeAnU10sfikgTX8SStGMg.JPEG.cucu154/KakaoTalk_20201121_200411952_01.jpg" width="40%" height="40%/>
