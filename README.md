@@ -26,7 +26,7 @@ To run your project, navigate to the directory and run one of the following npm 
 1. git remote add origin [repo 주소]
 2. git pull origin master --allow-unrelated-histories (readme파일을 받음
 
-## react native
+## expo
 
 - app.json  -> configuration 파일 (expo가 읽게될 파일)
 - App.js -> 기본적인 리엑트 컴포넌트 
@@ -43,3 +43,47 @@ To run your project, navigate to the directory and run one of the following npm 
 * expo 개발자 메뉴
 : commad or ctrl +D
 : 폰의 경우는 한번 흔들기
+
+- 디버그를 사용할 경우 애플리케이션을 느리게 만들 수 있기에, 필요할 때만 사용한다.
+
+* 파일들을 가지고 직접 작업하고 싶으면 npm run eject
+ -> but, 한번이라도 eject를 실행시키면 되돌릴 수 없다. (업데이트 등 전부 혼자 처리해야함)
+ 
+ ## react native
+ 
+ <네이티브 앱 만드는 방법>
+ 
+ 1. fully Native
+ : switft or objective-c로 ios 앱 만드는 것, Java or 코틀린 가지고 만드는 것
+ 
+ 2. 앱 기반 웹뷰 만드는 것
+ : 하이브리드, 앱 안에서 웹이 작동하는 것
+ 
+ 3. 리액트 네이티브
+ : Android, IOS 둘 다 자바스크립트 엔진을 가지고 있기에 자바스크립트를 실행할 수 있다. 즉, iOS또는 Android의 
+ 네이티브 엔진에게 (자바스크립트를 이용한) 메세지를 보내는 것
+ 
+ #### App.js의 TEXT
+ 
+ `
+ import { StyleSheet, Text, View } from 'react-native';
+ `
+ 
+ - 안드로이드, ios의 네이티브 텍스트, 뷰를 이어주는 브릿지
+ 
+ `
+ export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Hello!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+`
+
+- 우리는 컴포넌트를 사용, 즉 자바스크립트
+- 컴포넌트 안에 브릿지가 있다 -> 누군가가 작성해 놓은 swift code나 java code로 iphone, android가 이 컴포넌트를 이해하도록 하기 위해 (브릿지는 그러므로 항상 존재)
+
+#### <View>
+  : 뷰는 <div>와 유사한 것
