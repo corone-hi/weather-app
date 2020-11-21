@@ -37,4 +37,9 @@ To run your project, navigate to the directory and run one of the following npm 
                 - ios는 없기에 로그인해서 터미널에서 expo login 필요
                 - Run on iOS simulator/ Android device/emulator를 누르면 폰으로 테스트 가능
                
+* live reload 지원
+: 내가 저장하면, 자동으로 리프레쉬가 되고, 변경된 것 확인할 수 있다.
 
+* expo 개발자 메뉴
+: commad or ctrl +D
+: 폰의 경우는 한번 흔들기
