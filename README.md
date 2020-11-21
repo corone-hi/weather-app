@@ -140,7 +140,5 @@ const styles = StyleSheet.create({
 `//변경
 const styles = StyleSheet.create({
   flexDirection: "row"
-})
-
-`
+})`
 
