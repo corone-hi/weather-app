@@ -1,6 +1,7 @@
 # weather-app
 react native
 
+
 ## expo
 
 1. expo init weather-app
@@ -201,3 +202,74 @@ const styles = StyleSheet.create({
 ```
 
 <img src ="https://blogfiles.pstatic.net/MjAyMDExMjFfMjQ2/MDAxNjA1OTU3Njg0NjMz.ZerupBMxg69sr13YPGaaaqh8dauuWI_XNBytPN9v1mQg.4AkKBqiGBrrxB65_2n5YAqgKeAnU10sfikgTX8SStGMg.JPEG.cucu154/KakaoTalk_20201121_200411952_01.jpg" width="40%" height="40%"/>
+
+
++ flex:1 (container은 부모)
+-> 모든 공간 사용가능하다는 것을 의미
+-> yellow, blue를 flex:1으로 만들었을 때, 둘은 전부를 사용할 순 없음, flex 컨테이너 옆에 붙어있기 때문
+
++ flex:2
+-> 스크린의 3분의 2를 차지
+  즉, 자리를 경쟁하는 형제들, 더 큰애가 대부분의 자리를 차지하는 것
+
+** width, height보다는 flex로 조절하는 것이 좋음
+-> 사이즈가 큰 폭을 가지고 있거나, ipad를 열어보거나, 더 작은 폰, 회전 시 알아서 맞춰지기 때문
+
+
+### API
+
+-> expo api <Location>
+https://docs.expo.io/versions/v39.0.0/sdk/location/
+ 
+* background location: 사용자를 따라가거나, 그사람이 하는 것을 스파이 할 때
+* Geofencing: 사용자가 어떤 지역에 들어갔을때, 떠났을 때를 알고 싶을 때
+
+1. expo install expo-location, npm install expo-location
+2. import * as Location from 'expo-location';
+3. 클래스로 변경
+``` 
+export default class extends React.Component{
+  getLocation = async()=>{
+    const location = await Location.getCurrentPositionAsync();
+    console.log(location);
+
+  }
+  componentDidMount(){
+    this.getLocation();
+  }
+  render(){
+    return <Loading />;
+  }
+}
+```
+
+4. 위치 사용 승인 작업 받기
+
+```
+export default class extends React.Component{
+  getLocation = async()=>{
+    try {
+      await Location.requestPermissionsAsync();
+      const {coords} = await Location.getCurrentPositionAsync();  
+      console.log(location);
+
+    } catch (error) {
+      Alert.alert("Can't find you", "So sad");
+    }
+
+```
+
+5. [https://openweathermap.org]
+API key 설정
+
+6. [https://openweathermap.org/current]
+API 호출 -> 
+
+```
+getWeather = async(latitude, longitude)=>{
+    const { data } = await axios.get(
+      `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`
+    );
+    console.log(data);
+  }
+```
