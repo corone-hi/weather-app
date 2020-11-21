@@ -111,3 +111,22 @@ const styles = StyleSheet.create({
 
 🔴차이점: align-items으로 사용했다면 여기서는 alignItems로 표기
 
+- 텍스트에 css 적용하고 싶을 시 속성 변경 필요
+
+`
+<Text style={styles.text}>Hello!</Text>
+`
+- styles API도 수정 필요
+`
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0a3d62',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text:{
+    color:'white',
+  }
+});
+`
