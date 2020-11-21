@@ -118,8 +118,7 @@ const styles = StyleSheet.create({
 `
 - styles API도 수정 필요
 
-`
-const styles = StyleSheet.create({
+`const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0a3d62',
@@ -129,6 +128,4 @@ const styles = StyleSheet.create({
   text:{
     color:'white',
   }
-});
-
-`
+});`
