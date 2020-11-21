@@ -200,3 +200,4 @@ const styles = StyleSheet.create({
 });
 ```
 
+[https://blogfiles.pstatic.net/MjAyMDExMjFfMjQ2/MDAxNjA1OTU3Njg0NjMz.ZerupBMxg69sr13YPGaaaqh8dauuWI_XNBytPN9v1mQg.4AkKBqiGBrrxB65_2n5YAqgKeAnU10sfikgTX8SStGMg.JPEG.cucu154/KakaoTalk_20201121_200411952_01.jpg]
