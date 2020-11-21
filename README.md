@@ -117,6 +117,7 @@ const styles = StyleSheet.create({
 <Text style={styles.text}>Hello!</Text>
 `
 - styles API도 수정 필요
+
 `
 const styles = StyleSheet.create({
   container: {
@@ -129,4 +130,5 @@ const styles = StyleSheet.create({
     color:'white',
   }
 });
+
 `
