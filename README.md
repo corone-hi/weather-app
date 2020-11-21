@@ -182,5 +182,21 @@ const styles = StyleSheet.create({
 ```
 
 
-
+```
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0a3d62',
+   
+  },
+  yelloView:{
+    flex:1,
+    backgroundColor:"yellow"
+  },
+  blueView:{
+    flex:1,
+    backgroundColor:"blue"
+  }
+});
+```
 
