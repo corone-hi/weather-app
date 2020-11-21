@@ -129,3 +129,18 @@ const styles = StyleSheet.create({
     color:'white',
   }
 });`
+
+#### flex box
+
+- 웹사이트에서 모든 flex box의 디폴트는 로우(row)
+
+- 리액트 네이티브에선 flex direction이 "컬럼(column)"
+  -> 모바일 폰에서는 대게 모든게 서로 아래에 있기 때문
+  
+`//변경
+const styles = StyleSheet.create({
+  flexDirection: "row"
+})
+
+`
+
