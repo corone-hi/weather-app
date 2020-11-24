@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "one of nomad coders lecture\n",
+    "githubUrl": "https://github.com/corone-hi/weather-app.git"
   }
 }
