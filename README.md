@@ -367,3 +367,27 @@ export default class extends React.Component{
 
 - 날씨 이름들 가져와서 설정하기
 
+[https://openweathermap.org/weather-conditions]
+
+- icon 설정
+[https://docs.expo.io/guides/icons/#expovector-icons]
+[https://icons.expo.fyi/]
+
+```
+import { MaterialCommunityIcons } from '@expo/vector-icons';  //{}안에 사용하고 싶은 패밀리명 입력
+```
+
+사용법:
+```
+export default class IconExample extends React.Component {
+  render() {
+    return <Ionicons name="md-checkmark-circle" size={32} color="green" />;
+  }
+}
+
+```
+
+-배경색 gradient
+-> expo install expo-linear-gradient
+->안되면 npm으로 
+
