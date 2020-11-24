@@ -273,3 +273,97 @@ getWeather = async(latitude, longitude)=>{
     console.log(data);
   }
 ```
+
+</hr>
+
+### styles
+
+1. 온도 설정 -> API: ceisius -> unit=metric (쿼리에 추가)
+2. 날씨에 따라 아이콘 속성도 달라지도록 설정
+- weather.js 생성
+```
+import React from "react";
+import { View, Text, StyleSheet }from "react-native";
+import PropTypes from "prop-types";
+
+export default function Weather({temp}){
+    return(
+        <View style={styles.container}>
+            <Text>{temp}</Text>
+        </View>
+    );
+
+}
+
+Weather.propTypes = {
+    temp:PropTypes.number.isRequired
+
+};
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+
+
+    },
+    text:{
+
+    }
+});
+```
+
+- App.js에 temperature 가져올 수 있도록 수정
+
+```
+import React from 'react';
+import {Alert} from "react-native";
+import Loading from "./Loading";
+import Weather from "./Weather";
+import * as Location from 'expo-location';
+import axios from "axios";
+
+
+
+const API_KEY = "5061f187425517f513243ca088c26c42"
+
+
+export default class extends React.Component{
+  state = {
+    isLoading: true
+  }
+  getWeather = async(latitude, longitude)=>{
+    const { data } = await axios.get(
+      `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
+    );
+    this.setState({ isLoading:false, temp: data.main.temp});
+  }
+  getLocation = async()=>{
+    try {
+      await Location.requestPermissionsAsync();
+      const {coords: {latitude, longitude}} = await Location.getCurrentPositionAsync();  
+      //send to API and get weather
+      this.getWeather(latitude, longitude);
+      
+      
+    } catch (error) {
+      Alert.alert("Can't find you", "So sad");
+    }
+    
+    
+  }
+  componentDidMount(){
+    this.getLocation();
+  }
+  render(){
+    const { isLoading, temp } = this.state;
+    return isLoading ? <Loading /> : <Weather temp={Math.round(temp)} />;
+  }
+}
+
+
+```
+
+- 날씨 이름들 가져와서 설정하기
+
