@@ -1,5 +1,5 @@
 # weather-app
-react native. Also, How to gip
+react native. Also, How to github
 
 ## expo
 
